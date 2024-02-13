@@ -41,16 +41,17 @@
   function greet($name) {
     echo "Hello, " . $name;
   }
-  greet();
+  greet('name');
 ?>
 
 <hr />
 <h3>Question 6</h3>
 
+
 <?php
   // Question 6: Be careful, this will not result in a loud error, it's just going to be wrong. Read the code to figure out what it SHOULD do, and make sure it does that.
   $age = 20;
-  if ($age = 18) {
+  if ($age == 18) {//added another =
       echo "You are 18 years old.";
   } else {
     echo "You are not 18 years old.";
@@ -63,7 +64,7 @@
 <?php
   // Question 7
   $count = 0;
-  echo 'Count: ' + ++$count;
+  echo 'Count: ' . ++$count;
 ?>
 
 <hr />
@@ -72,7 +73,7 @@
 <?php
   // Question 8
   define("GREETING", "Hello, everyone.");
-  echo GREETINGS;
+  echo "GREETINGS";
 ?>
 
 <hr />
@@ -83,7 +84,7 @@
   function sayHello() {
     echo "Hello!";
   }
-  sayHello("John");
+  sayHello();//Took away "John" in ()
 ?>
 
 <hr />
@@ -92,5 +93,5 @@
 <?php
   // Question 10
   $user = array("name" => "John Doe", "age" => 30);
-  echo $user[name];
+  echo $user['name'];
 ?>
